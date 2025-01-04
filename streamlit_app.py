@@ -16,9 +16,9 @@ def iou_metric(y_true, y_pred):
 #model = load_model('mobilenet_model1.h5')
 
 # Compile the model if needed
-model.compile(optimizer='adam', 
-              loss='sparse_categorical_crossentropy', 
-              metrics=['accuracy', 'Precision', 'Recall'])
+#model.compile(optimizer='adam', 
+ #             loss='sparse_categorical_crossentropy', 
+ #             metrics=['accuracy', 'Precision', 'Recall'])
 
 # Set up Streamlit configuration
 st.set_page_config(layout="centered", page_title="Mobile Web App", page_icon="📱")
