@@ -66,6 +66,8 @@ def main():
         page2()
     elif st.session_state.page == 3:
         page3()
+    elif st.session_state.page == 4:
+        page4()
     elif st.session_state.page == 5:
         page5()
 
