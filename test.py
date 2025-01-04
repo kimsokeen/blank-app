@@ -59,3 +59,15 @@ def page5():
     if st.button("Get Started"):
         navigate(6)
 
+def main():
+    if st.session_state.page == 1:
+        page1()
+    elif st.session_state.page == 2:
+        page2()
+    elif st.session_state.page == 3:
+        page3()
+    elif st.session_state.page == 5:
+        page5()
+
+if __name__ == "__main__":
+    main()
