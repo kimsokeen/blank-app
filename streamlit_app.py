@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 from PIL import Image
-#import cv2
+import cv2
 
 def iou_metric(y_true, y_pred):
     intersection = tf.reduce_sum(y_true * y_pred)
