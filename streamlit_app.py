@@ -12,10 +12,8 @@ def iou_metric(y_true, y_pred):
     union = tf.reduce_sum(y_true + y_pred) - intersection
     return intersection / (union + tf.keras.backend.epsilon())
 
-segmentation_model = load_model( r'c:\keen\project\my_streamlit_app\best_model3.keras',custom_objects={'iou_metric': iou_metric})
-
-# Load your trained model
-model = load_model(r'C:\keen\project\my_streamlit_app\mobilenet_model1.h5')
+segmentation_model = load_model('best_model3.keras', custom_objects={'iou_metric': iou_metric})
+model = load_model('mobilenet_model1.h5')
 
 # Compile the model if needed
 model.compile(optimizer='adam', 
@@ -277,12 +275,9 @@ def main_page_buttons():
 
 # Page 1: Get Started
 def page1():
-    #st.image("c:\keen\project\my_streamlit_app\logo1.png", width = 400)
-    st.title("DiaBest")
+    st.title("Ulcers Detector")
     if st.button("Get Started"):
         navigate(2)
-    #st.markdown("<h1 style='text-align: center; color: white;'>DiaBest</h1>", unsafe_allow_html=True)
-    
 
 # Page 2: Log In
 def page2():
