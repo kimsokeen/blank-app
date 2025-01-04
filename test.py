@@ -33,3 +33,29 @@ def back_button(destination_page):
     )
     if st.button("← Back", key=f"back_{destination_page}"):
         navigate(destination_page)
+
+def page1():
+    st.title("Ulcers Detector")
+    if st.button("Get Started"):
+        navigate(2)
+
+def page2():
+    st.title("page2")
+    if st.button("Get Started"):
+        navigate(3)
+
+def page3():
+    st.title("page3")
+    if st.button("Get Started"):
+        navigate(4)
+
+def page4():
+    st.title("page4")
+    if st.button("Get Started"):
+        navigate(5)
+
+def page5():
+    st.title("page5")
+    if st.button("Get Started"):
+        navigate(6)
+
