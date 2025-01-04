@@ -11,9 +11,10 @@ def iou_metric(y_true, y_pred):
     intersection = tf.reduce_sum(y_true * y_pred)
     union = tf.reduce_sum(y_true + y_pred) - intersection
     return intersection / (union + tf.keras.backend.epsilon())
-
-segmentation_model = load_model('best_model3.keras', custom_objects={'iou_metric': iou_metric})
+    
 model = load_model('mobilenet_model1.h5')
+segmentation_model = load_model('best_model3.keras', custom_objects={'iou_metric': iou_metric})
+
 
 # Compile the model if needed
 model.compile(optimizer='adam', 
