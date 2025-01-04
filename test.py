@@ -41,23 +41,27 @@ def page1():
 
 def page2():
     st.title("page2")
+    back_button(1)
     if st.button("Get Started"):
         navigate(3)
 
 def page3():
     st.title("page3")
+    back_button(1)
     if st.button("Get Started"):
         navigate(4)
 
 def page4():
     st.title("page4")
+    back_button(1)
     if st.button("Get Started"):
         navigate(5)
 
 def page5():
     st.title("page5")
+    back_button(1)
     if st.button("Get Started"):
-        navigate(6)
+        navigate(1)
 
 def main():
     if st.session_state.page == 1:
